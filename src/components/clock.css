@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: peachpuff;
+}
+
+.time-stamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    color:rgb(87, 41, 0);
+    font-size: 90px;
+}
