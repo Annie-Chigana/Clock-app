@@ -26,11 +26,22 @@ function Alarm() {
             }
         }
     }, [time, alarmTime]);
+
+        const handleAddAlarm = () => {
+        alarmTime(true);
+    }
+
+    useEffect(() => {
+        if (!handleAddAlarm) {
+            setAlarmTime(false)
+        }
+    }, [handleAddAlarm])
      
     const playSound = () => {
         const audio = new Audio ("https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg");
         audio.play();
     };
+
 
     const handleSetAlarm = (e) => {
         setAlarmTime(e.target.value);
@@ -40,7 +51,8 @@ function Alarm() {
        <div>
 
 
-        <div style={{ display: 'none'}}>
+        <div>
+            
             <label>Set Alarm: </label>
             <input type="time" onChange={handleSetAlarm} value={alarmTime} />
 
@@ -50,6 +62,7 @@ function Alarm() {
         </button>
         {isAlarmRinging && (
             <h3>⏰ Alarm Ringing!</h3>
+
         )}
         </div>
 
