@@ -1,0 +1,12 @@
+.add-alarm-btn {
+    position: fixed;
+    bottom:80px;
+    right:30px;
+
+    padding:20px;
+    border-radius: 50%;
+    background-color: #904C77;
+    color: #E49AB0;
+    border:none;
+    font-size:20px;
+}

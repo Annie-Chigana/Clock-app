@@ -1,0 +1,37 @@
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #904C77;
+    padding: 33px;
+    
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.main-settings, .hour-glass, .stopwatch, .running-man {
+    position: fixed;;
+    bottom: 20px;
+
+    background-color: transparent;
+    font-size:30px;
+    color: #E49AB0;
+    border:none;
+}
+.main-settings {
+    right: 5%;
+}
+
+.hour-glass {
+    right:30%;
+}
+
+.stopwatch {
+    right:55%;
+}
+
+.running-man {
+    right:80%;
+}
