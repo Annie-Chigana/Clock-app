@@ -6,6 +6,7 @@ body, html {
 }
 
 .time-stamp {
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,3 +15,51 @@ body, html {
     color:rgb(87, 41, 0);
     font-size: 90px;
 }
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(255, 210, 148);
+    padding: 33px;
+    
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.main-settings, .hour-glass, .stopwatch, .running-man {
+    position: fixed;;
+    bottom: 20px;
+
+    background-color: transparent;
+    font-size:30px;
+    color:rgb(255, 170, 95);
+    border:none;
+}
+.main-settings {
+    right: 5%;
+}
+
+.hour-glass {
+    right:30%;
+}
+
+.stopwatch {
+    right:55%;
+}
+
+.running-man {
+    right:80%;
+}
+/*.main-settings, .hour-glass {
+    /*position the settings icon to right hand botton
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background-color: transparent;
+    font-size:30px;
+    color:rgb(255, 170, 95);
+    border:none;
+}*/
