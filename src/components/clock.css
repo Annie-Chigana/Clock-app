@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: peachpuff;
+    background-color: #E49AB0;
 }
 
 .time-stamp {
@@ -12,7 +12,7 @@ body, html {
     align-items: center;
     height: 100vh;
 
-    color:rgb(87, 41, 0);
+    color: #904C77;
     font-size: 90px;
 }
 .nav-section {
@@ -20,7 +20,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
 
-    background-color: rgb(255, 210, 148);
+    background-color: #904C77;
     padding: 33px;
     
     position:fixed;
@@ -34,7 +34,7 @@ body, html {
 
     background-color: transparent;
     font-size:30px;
-    color:rgb(255, 170, 95);
+    color: #E49AB0;
     border:none;
 }
 .main-settings {

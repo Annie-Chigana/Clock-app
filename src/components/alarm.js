@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGear, faHourglassHalf, faStopwatch, faPersonRunning, faPlus  } from "@fortawesome/free-solid-svg-icons";
+
 
 function Alarm() {
     const [time, setTime] = useState(new Date());
@@ -35,20 +38,27 @@ function Alarm() {
     };
     return (
        <div>
-        <h1>🕒 Alarm Clock</h1>
-        <h2>{time.toLocaleTimeString()}</h2>
 
-        <div>
+
+        <div style={{ display: 'none'}}>
             <label>Set Alarm: </label>
             <input type="time" onChange={handleSetAlarm} value={alarmTime} />
-        </div>
 
+            
         <button>
             Set Alarm
         </button>
         {isAlarmRinging && (
             <h3>⏰ Alarm Ringing!</h3>
         )}
+        </div>
+
+        <div className="add-alarm">
+            <button className="add-alarm-btn">
+                <FontAwesomeIcon icon={faPlus} size="lg"/>
+            </button>
+        </div>
+
        </div>
     );
 }
