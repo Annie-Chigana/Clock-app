@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faHourglassHalf, faStopwatch, faPersonRunning, faPlus  } from "@fortawesome/free-solid-svg-icons";
+import { faPlus  } from "@fortawesome/free-solid-svg-icons";
 import './alarm.css';
 
 function Alarm() {
     const [time, setTime] = useState(new Date());
     const [alarmTime, setAlarmTime] = useState("");
     const [isAlarmRinging, setIsAlarmRinging] = useState(false);
+    const [showSetAlarm, setShowSetAlarm] = useState(false);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -27,15 +28,6 @@ function Alarm() {
         }
     }, [time, alarmTime]);
 
-        const handleAddAlarm = () => {
-        alarmTime(true);
-    }
-
-    useEffect(() => {
-        if (!handleAddAlarm) {
-            setAlarmTime(false)
-        }
-    }, [handleAddAlarm])
      
     const playSound = () => {
         const audio = new Audio ("https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg");
@@ -47,17 +39,25 @@ function Alarm() {
         setAlarmTime(e.target.value);
         setIsAlarmRinging(false);
     };
+
+    const handleAddAlarm = () => {
+        setShowSetAlarm(true);
+    }
+
+    const handleAlarmSet = () => {
+        setShowSetAlarm(false);
+    }
     return (
        <div>
 
-
+        {showSetAlarm && (
         <div>
             
             <label>Set Alarm: </label>
             <input type="time" onChange={handleSetAlarm} value={alarmTime} />
 
             
-        <button>
+        <button onClick={handleAlarmSet}>
             Set Alarm
         </button>
         {isAlarmRinging && (
@@ -65,9 +65,9 @@ function Alarm() {
 
         )}
         </div>
-
+        )}
         <div className="add-alarm">
-            <button className="add-alarm-btn">
+            <button className="add-alarm-btn" onClick={handleAddAlarm}>
                 <FontAwesomeIcon icon={faPlus} size="lg"/>
             </button>
         </div>

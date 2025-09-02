@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faHourglassHalf, faStopwatch, faPersonRunning   } from "@fortawesome/free-solid-svg-icons";
 import './clock.css';
 
 function Clock() {
